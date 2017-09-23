@@ -6,7 +6,7 @@
 
 通过抓包，分析出CNVD的反爬虫机制：
 
-* 首次访问，user-agent请求无cookie,CNVD会返回521错误，并在设置了cookie值:`__jsluid`,并返回了一个脚本，，这个脚本便是项目目录`script.js`，再分析其代码，其动态构建了代码，即项目目录里的`setCookie.js`，这段代码根据已有的cookie,动态生成新的cookie,而且还设置了定时器，重新访问。这次带上了正确的cookie，正确获取到内容。
+* 首次访问，user-agent请求无cookie,CNVD会返回521错误，并设置了cookie值:`__jsluid`,并返回了一个脚本，，这个脚本便是项目目录`script.js`，再分析其代码，其动态构建了代码，即项目目录里的`setCookie.js`，这段代码根据已有的cookie,动态生成新的cookie,而且还设置了定时器，重新访问。这次带上了正确的cookie，正确获取到内容。
 
 * 一次尝试：既然要得到正确cooke,那么试试爬虫直接设置cookie，但是没那么简单，爬了几次以后，就会发现返回content为空。此种情况，两种可能原因：一段时间内限制IP访问次数，或者限制对应的cookie访问次数。
 
