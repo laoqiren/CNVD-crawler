@@ -1,0 +1,25 @@
+{
+  "name": "cnvd-crawler",
+  "version": "1.0.0",
+  "description": "to craw the cnvd website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "crawler",
+    "cnvd"
+  ],
+  "author": "laoqiren",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.5.0",
+    "cheerio": "^1.0.0-rc.2",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.12",
+    "nightmare": "^2.10.0",
+    "superagent": "^3.6.0",
+    "superagent-proxy": "^1.0.2"
+  }
+}
