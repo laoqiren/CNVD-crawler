@@ -89,7 +89,7 @@ async function fetchByPages(url,cb){
     cb(null,results);
 }
 
-async function main(){
+(async function main(){
     try {
         let sumPage = await getSumPage();
         let pageUrls = [];
@@ -107,6 +107,4 @@ async function main(){
         return console.error(err);
     }
     
-}
-
-main();
+})();
